@@ -1,0 +1,265 @@
+html,body{
+    margin:0;
+    padding:0;
+    height:100%;
+    width:100%;
+    font-family:Helvetica;
+}
+#container{
+    background-color:#303030;
+    height:100%;
+    width:100%;
+}
+header{
+    background-color:#202020;
+    height:10%;
+    width:100%;
+}
+header img{
+    position:relative;
+    top:10%;
+    height:80%;
+    vertical-align: middle;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#seperator{
+    height:0.2%;
+    width:100%;
+    background-color:white;
+}
+#menu{
+    display:flex;
+    background-color:#202020;
+    height:5%;
+    width:100%;
+}
+.menubutton, #overzicht, #account, .dropdown{
+    line-height:150%;
+    vertical-align: middle;
+    text-align:center;
+    text-decoration:none;
+    font-size:15px;
+    margin-top:5px;
+    color:#02aaf8;
+    border:none;
+    height:80%;
+    width:15%;
+    flex-grow:1;
+}
+.menubutton:hover, #overzicht:hover {
+    background-color:#303030;
+}
+
+#overzicht:hover .dropdown{
+    display:flex;
+}
+.dropdown{
+    display:block;
+    float:left;
+    flex-grow:1;
+    background-color:#202020;
+    flex-wrap:wrap;
+    text-decoration: none;
+}
+.dropdowncontent{
+margin-top:0px;
+display: none;
+position: absolute;
+background-color: #202020;
+z-index: 1;
+position: absolute;
+}
+
+.dropdowncontent a{
+  float:none;
+  display:block;
+  text-decoration:none;
+  width:100%;
+}
+
+.dropdown:hover .dropdowncontent{
+  display:block;
+  width:20%;
+}
+#content{
+    overflow-y:auto;
+    font-size:2vw;
+    text-align:center;
+    color:white;
+    position:absolute;
+    height:84%;
+    width:100%;
+}
+.movieposterhome{
+    height:auto;
+    width:auto;
+    max-height:70%;
+    max-width:20%;
+}
+#scrollimage{
+    margin-top:2%;
+    max-height:10%;
+}
+#contentbox{
+    position:absolute;
+    top:4%;
+    left:5%;
+    height:90%;
+    width:90%;
+    line-height:100px;
+}
+::-webkit-scrollbar{
+    width:1%;
+}
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+::-webkit-scrollbar-thumb{
+    background-color: darkgrey;
+    outline: 1px solid #02aaf8;
+}
+#contentbox-left{
+    line-height:20px;
+    font-size:1vw;
+    height:100%;
+    width:20%;
+    background-color:#202020;
+    float:left;
+}
+#movieposterid{
+    margin-top:5%;
+    max-width:90%;
+}
+#contentbox-right{
+    height:100%;
+    width:75%;
+    margin-left:5%;
+    background-color:#202020;
+    float:left;
+    overflow-y:auto;
+}
+#contentbox-right h1{
+    margin-top:0;
+    margin-left:5%;
+    text-align:left;
+    font-size:2.5vw;
+    margin-bottom:0;
+    line-height:75px;
+}
+#contentbox-right p{
+    text-align:left;
+    line-height: 20px;
+    font-size:1vw;
+    margin-left:5%;
+    margin-right:20%;
+}
+#contentbox-right h3{
+    text-align:left;
+    margin-left:5%;
+    font-size:1.5vw;
+    line-height:30px;
+}
+#registratieknop{
+    width:30%;
+    height:20%;
+    border:none;
+    background-color:#000000;
+    font-size:1.5em;
+    color:#ffffff;
+}
+#registratieknop:hover{
+background: linear-gradient(rgba(0, 170, 248, 0), rgba(2, 170, 248, 1));
+}
+#kijkwijzer{
+    position:absolute;
+    max-height:10%;
+}
+#afspelen{
+    border:none;
+    color:#02aaf8;
+    background-color:black;
+    height:10%;
+    width:90%;
+    margin-top:2%;
+    font-size:2em;
+}
+#abbonementenLijst h1{
+  color:white;
+  text-align:center;
+}
+
+#abbonementenLijstBasis , #abbonementenLijstDuo , #abbonementenLijstFamilie {
+  font-size:20px;
+  float:left;
+  width:30%;
+  margin-left: 2.5%;
+  background-color: #202020;
+}
+#abbonementenLijstBasis:hover, #abbonementenLijstDuo:hover , #abbonementenLijstFamilie:hover {
+background: linear-gradient(rgba(0, 170, 248, 0), rgba(2, 170, 248, 1));
+}
+
+#abbonementenLijstBasis a, #abbonementenLijstDuo a, #abbonementenLijstFamilie a{
+  text-decoration:none;
+  color:white;
+}
+
+#abbonementenLijstBasis ul, #abbonementenLijstDuo ul, #abbonementenLijstFamilie ul{
+  text-align:left;
+
+}
+
+#registratieformbox {
+    font-size:20px;
+    display: block;
+    width: 50%;
+    height: 100%;
+    background-color:#202020;
+    float: left;
+    margin-left:25%;
+    line-height:250%;
+}
+#registratie input[type=text]{
+    border:none;
+    background-color:#dedede;
+    margin-top:2%;
+}
+#registratie input[type=password]{
+    border:none;
+    background-color:#dedede;
+    margin-top:2%;
+}
+#registratie input[type=submit]{
+    border:none;
+    background-color:#dedede;
+    border:none;
+    background-color:#101010;
+    color:#02aaf8;
+}
+#profielfoto{
+    margin-top:20px;
+    max-width:90%;
+}
+#account{
+    color:white;
+    width:auto;
+    font-size:20px;
+    margin-top:5%;
+    margin-left:10%;
+    text-align:left;
+}
+.over{
+    overflow-y:auto;
+    margin-left:7%;
+    font-size:20px;
+    line-height:25px;
+    width:40%;
+    height:100%;
+    background-color:#202020;
+    float:left;
+}
+.over img{
+    margin-top:20px;
+}
