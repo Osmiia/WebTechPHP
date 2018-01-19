@@ -20,15 +20,33 @@ include 'includes/variables.php';
 
         <div id="contentbox">
             <div id="contentbox">
-                <a href="StarWarsTheLastJedi.html"><img class="movieposterhome" src="Afbeeldingen/starwarsthelastjedi.jpg" alt=""></a>
-                <img class="movieposterhome" src="Afbeeldingen/starwarsrogueone.jpg" alt="">
-                <img class="movieposterhome" src="Afbeeldingen/batmanthedarkknight.jpg" alt="">
-                <img class="movieposterhome" src="Afbeeldingen/thefateofthefurious.jpeg" alt="">
+                <form name=moviedetails method='POST' action='moviedetails.php'>
+                <?php
+                $query="select  * from movie LIMIT 4";
+                include 'includes/sql.php';
+                foreach ($conn->query($query) as $row)
+                {
+                    echo "
+                            <button name='movieid' class='movieposteroverviewbutton' value='".$row['movie_id']."'>
+                              <img class='movieposteroverview' src='".$row['cover_image']."'. alt=''>
+                            </button>
+                      ";
+                }
+                ?>
+                </form>
                 <br>De laatste films in jouw huiskamer<br>
-                <?php if(isset($_SESSION['user_name'])){} else { echo "
-                <img id='scrollimage' src='Afbeeldingen/scrollimage.png' alt=''><br><br>
-                <a href='registreer.html'><button id='registratieknop'>Registreer nu!</button></a>
-                ";}?>
+
+                <?php
+                if(isset($_SESSION['user_name'])){
+
+                }
+                else {
+                    echo "
+                        <img id='scrollimage' src='Afbeeldingen/scrollimage.png' alt=''><br><br>
+                        <a href='registreer.html'><button id='registratieknop'>Registreer nu!</button></a>
+                    ";}
+                ?>
+
             </div>
         </div>
         </div>

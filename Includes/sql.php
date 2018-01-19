@@ -8,8 +8,9 @@ try {
     // set the PDO error mode to exception
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 }
-catch(PDOException $e)
-{}
+
+catch(PDOException $e) {
+}
 
 //$query="select firstname, lastname from customer order by 1 desc";
 //foreach ($conn->query($query) as $row) {
